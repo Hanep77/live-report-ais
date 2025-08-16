@@ -8,7 +8,7 @@ export default function Home() {
   const [data, setData] = useState({});
 
   return (
-    <main className="min-h-screen max-w-screen-md m-auto flex flex-col md:flex-row gap-6 items-center">
+    <main className="p-4 md:p-0 min-h-screen max-w-screen-md m-auto flex flex-col md:flex-row gap-6 items-center">
       <div className="flex-1">
         <LiveReportForm onChange={setData} />
         <button onClick={downloadStoryImage} className="mt-4 px-4 py-2 bg-blue-600 text-white rounded w-80">Download Image</button>
