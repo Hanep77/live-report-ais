@@ -15,8 +15,8 @@ export default function StoryPreview({ data }: any) {
               <div className='me-1'>
                 <Image src={"/LOGO UNSIL.png"} alt='logo' width={500} height={500} className='w-8' />
               </div>
-              <div className='me-2'>
-                <Image src={"/LOGO HMIF.png"} alt='logo' width={500} height={500} className="w-8" />
+              <div>
+                <Image src={"/Logo_FT_UNSIL.png"} alt='logo' width={500} height={500} className="w-[34px]" />
               </div>
               <div className='-me-1'>
                 <Image src={"/AIS.png"} alt='logo' width={500} height={500} className='w-10' />
@@ -29,18 +29,23 @@ export default function StoryPreview({ data }: any) {
           <div className='flex justify-center mt-4'>
             <div className='bg-red-500 rounded text-white px-4 py-1 font-bold flex items-center gap-2 text-xs'><TfiAnnouncement />live report</div>
           </div>
-          <h2 className="font-semibold mt-1 text-2xl text-center text-white">Seminar Artificial Intelligence Siliwangi</h2>
+          <h2 className="text-white font-bold text-3xl uppercase 
+             drop-shadow-[0_2px_2px_rgba(0,0,0,0.3)] 
+             [text-shadow:_2px_2px_0_#3282B8,_-2px_-2px_0_#3282B8,_2px_-2px_0_#3282B8,_-2px_2px_0_#3282B8] text-center italic mt-2">
+            WEBINAR AIS V
+          </h2>
+
+          <div className='min-h-60 max-h-96 bg-[#3282B8] rounded-xl flex flex-col items-center p-4 border-4 border-white mt-6'>
+            {imgURL && (
+              <div className="flex-1 mb-4">
+                <img src={imgURL} alt="Uploaded" className="w-full object-cover rounded" />
+              </div>
+            )}
+            <p className='text-blue-100 text-xs text-center mb-2'>{data.description}</p>
+            <p className='text-white text-sm text-center font-medium'>{data.speaker}</p>
+          </div>
         </div>
 
-        <div className='min-h-60 max-h-96 bg-[#3282B8] rounded-xl flex flex-col items-center p-4 border-4 border-white'>
-          {imgURL && (
-            <div className="flex-1 mb-4">
-              <img src={imgURL} alt="Uploaded" className="w-full object-cover rounded" />
-            </div>
-          )}
-          <p className='text-blue-100 text-xs text-center mb-2'>{data.description}</p>
-          <p className='text-white text-sm text-center font-medium'>{data.speaker}</p>
-        </div>
 
         <div className='flex text-xs shadow shadow-[#0F4C75] bg-[#3282B8] mx-auto py-1 px-4 text-white rounded-full items-center gap-1 z-20'>
           <AiOutlineYoutube className='text-xl' />
@@ -51,7 +56,9 @@ export default function StoryPreview({ data }: any) {
         </div>
       </div>
 
-      <Image src={"/Maung.png"} alt='maung' width={500} height={500} className='absolute -right-5 top-40 w-32 -rotate-60' />
+      <div className='flex justify-center'>
+        <Image src={"/Maung.png"} alt='maung' width={500} height={500} className='absolute -bottom-6 w-32 mx-auto' />
+      </div>
     </div>
   );
 }
