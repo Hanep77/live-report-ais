@@ -12,13 +12,16 @@ export default function StoryPreview({ data }: any) {
         <div>
           <div className='flex justify-center'>
             <div className="flex items-center shadow shadow-[#0F4C75] bg-white ps-4 pe-2 py-1 rounded-full">
-              <div className='me-1'>
-                <Image src={"/LOGO UNSIL.png"} alt='logo' width={500} height={500} className='w-8' />
-              </div>
               <div>
                 <Image src={"/Logo_FT_UNSIL.png"} alt='logo' width={500} height={500} className="w-[34px]" />
               </div>
-              <div className='-me-1'>
+              <div className='ms-2'>
+                <Image src={"/LOGO HMIF.png"} alt='logo' width={500} height={500} className="w-[30px]" />
+              </div>
+              <div className='ms-2'>
+                <Image src={"/Logo MAUNC.png"} alt='logo' width={500} height={500} className="w-[34px]" />
+              </div>
+              <div className='-me-2'>
                 <Image src={"/AIS.png"} alt='logo' width={500} height={500} className='w-10' />
               </div>
               <div>
